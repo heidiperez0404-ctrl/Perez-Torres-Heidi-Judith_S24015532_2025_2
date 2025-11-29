@@ -1,0 +1,47 @@
+//Crear un programa que simule un cajero automático, para realizar retiros de dinero. El programa deberá:
+//• Iniciar con un saldo disponible de $5000.00.
+//• Solicitar al usuario el monto a retirar.
+//• Validar que el retiro no sea mayor al saldo disponible.
+//• Si el monto es válido, realizar la operación y mostrar el saldo actualizado.
+//• Si el monto es mayor que el saldo, mostrar el mensaje: “Saldo insuficiente.”
+//• El programa debe repetir el proceso de retiro mientras el usuario desee continuar.
+//• Finalizar cuando el usuario indique que ya no desea realizar más operaciones
+
+import java.util.Scanner;
+
+public class E4CajeroAutomatico 
+{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double saldo = 5000.00;
+        boolean continuar = true;
+
+	while (continuar) {
+		System.out.println("Saldo disponible: $" + saldo);
+		System.out.print("Ingrese el monto a retirar: $");
+			double retiro = scanner.nextDouble();
+
+	if (retiro <= 0) 
+	{
+                System.out.println("Monto inválido. Debe ser mayor que cero.");
+		} 
+		else if (retiro > saldo) {
+                System.out.println("Saldo insuficiente.");
+		} 
+		else
+		{
+                saldo -= retiro;
+                System.out.println("Retiro exitoso. Nuevo saldo: $" + saldo);
+            }
+
+            System.out.print("¿Desea realizar otra operación? (si/no): ");
+            String respuesta = scanner.next();
+            if (respuesta.equalsIgnoreCase("no")) {
+                continuar = false;
+            }
+        }
+
+        System.out.println("Gracias por usar el cajero automático.");
+        scanner.close();
+    }
+}
