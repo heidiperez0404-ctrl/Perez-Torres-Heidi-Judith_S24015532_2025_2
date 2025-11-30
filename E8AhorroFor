@@ -1,0 +1,19 @@
+//Una persona ahorra $500 cada mes. Crea un programa que calcule el ahorro acumulado al final de cada mes durante un año, donde cada mes ofrece el
+//9% de interés. Posterior a ello mostrar el total ahorrado al final. Lo anterior es importante desarrollarlo a partir de un ciclo for.
+
+public class E8AhorroFor {
+    public static void main(String[] args) 
+    {
+    
+        double monto = 0;
+        
+        for(int i = 1; i <= 12; i++) 
+        {
+            monto += (monto * 0.09);
+            monto += 500;
+        }
+        
+        System.out.println("El monto final es de: " + monto);
+    
+    }
+}
