@@ -1,0 +1,22 @@
+//Desarrollar un programa que solicite un numero entero y muestre su tabla de multiplicar del 1 al 10, utilizando un ciclo for.
+
+import java.util.Scanner;
+
+public class E7TablaMultiplicarFor 
+{
+    public static void main(String[] args) 
+    {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("\tTabla de multiplicar");
+        System.out.print("Ingrese un numero: ");
+        int num = input.nextInt();
+        
+        for(int i = 1; i <= 10; i++) 
+        {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+        
+    }
+}
