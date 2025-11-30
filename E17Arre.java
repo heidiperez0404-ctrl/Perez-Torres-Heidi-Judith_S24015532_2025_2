@@ -1,15 +1,19 @@
 import java.util.Scanner;
 
-public class Ejercicio17 {
-    public static void main(String[] args) {
+public class E17Arre
+{
+    public static void main(String[] args) 
+    {
     
         Scanner input = new Scanner(System.in);
         String atletas[][] = new String[3][4];  
         double mejorTiempo = Double.MAX_VALUE;
         double tiempo;
         
-        for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 4; j++) {
+        for(int i = 0; i < 3; i++) 
+        {
+            for(int j = 0; j < 4; j++) 
+            {
                 switch(j) {
                     case 0 -> System.out.print("Ingresa el nombre del atleta: ");
                     case 1 -> System.out.print("Ingresa el apellido del atleta: ");
@@ -28,10 +32,10 @@ public class Ejercicio17 {
         }
         
         System.out.println("\n\tInformación de los atletas");
-        System.out.printf("%-12s %-12s %-15s %-10s\n", 
-            "Nombre", "Apellido", "Especialidad", "Tiempo (s)");
+        System.out.printf("%-12s %-12s %-15s %-10s\n", "Nombre", "Apellido", "Especialidad", "Tiempo (s)");
         
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 3; i++) 
+        {
             System.out.printf("%-12s %-12s %-15s %-10s\n",
                 atletas[i][0],
                 atletas[i][1],
